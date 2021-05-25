@@ -40,10 +40,8 @@ internal class MainViewModel @Inject constructor(
     }.distinctUntilChanged()
 
     fun onSearchQueryChanged(query: String) {
-        if (query.length > 3) {
-            searchQueryLiveData.value = query
-            loadRestaurants()
-        }
+        searchQueryLiveData.value = query
+        loadRestaurants()
     }
 
     fun onLocationLoaded(latLng: LatLng) {
